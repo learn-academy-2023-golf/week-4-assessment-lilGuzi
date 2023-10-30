@@ -40,12 +40,14 @@ beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
 # Pseudo code:
-
+# declare a method called remove_vowels that taking in a string
 def remove_vowels(string)
+# declare a variable that includes the vowels we are looking for in both lowercase and uppercase 
     vowels = "aeiouAEIOU"
+# use the delete built in method to itterate through the string and delete anyting that is in the vowels variable 
     string.delete(vowels)
 end
-
+# calls on the method and gives the variable that holds the string we will be itterating through
 p(remove_vowels(beatles_album1))
 p(remove_vowels(beatles_album2))
 p(remove_vowels(beatles_album3))
@@ -60,12 +62,15 @@ palindrome_test_case3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
 
 # Pseudo code:
-
+# declare a method called pal that takes in a string 
 def pal(word)
+# use .downcase to remove capital leters and evaluate if the word is the same when reversed 
     if word.downcase == word.downcase.reverse
+# returns the given word "is a palindrome" if it is the same when reversed
         "#{word} is a palindrome"
+# returns the given word "is not a palindrome" if it is not the same when reveresed 
     else "#{word} is not a palindrome"
     end
 end
-
+# calls on the method and provides the variable that holds the string to be evaluated.
 p pal(palindrome_test_case1)
